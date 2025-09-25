@@ -15,3 +15,25 @@ headers:
           value: "Host"
 include_subgraph_errors:
   all: true
+coprocessor:
+  url: https://airlock-auth-coprocessor-ed3c378ab968.herokuapp.com/
+  router:
+    request:
+      headers: true
+      context: all
+  subgraph:
+    all: 
+      request:
+        headers: true
+        body: true
+        context: all
+authentication:
+  router:
+    jwt:
+      jwks:
+        - url: https://dev-4gnj48muikmjespc.us.auth0.com/.well-known/jwks.json
+authorization:
+  require_authentication: true
+  directives:
+    enabled: true
+    reject_unauthorized: true # rejects all requests that are not authorized
