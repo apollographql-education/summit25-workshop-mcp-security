@@ -1,6 +1,15 @@
 endpoint: http://127.0.0.1:5000/
 transport:
   type: streamable_http
+  auth:
+    servers:
+      - https://dev-4gnj48muikmjespc.us.auth0.com
+    audiences:
+      - https://airlock-api.demo
+    resource: http://127.0.0.1:5000/mcp
+    scopes:
+      - host:view
+      - guest:booking
 operations:
   source: local
   paths:
