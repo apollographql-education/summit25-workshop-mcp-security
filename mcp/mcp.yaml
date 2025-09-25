@@ -1,0 +1,9 @@
+endpoint: http://127.0.0.1:5000/
+transport:
+  type: streamable_http
+operations:
+  source: local
+  paths:
+    - ./mcp/operations/GetListingDetails.graphql
+    - ./mcp/operations/GetUser.graphql
+    - ./mcp/operations/GetFeaturedListings.graphql
