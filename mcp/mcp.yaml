@@ -9,6 +9,7 @@ transport:
     scopes:
       - host:view
       - guest:booking
+      - cost:view
 operations:
   source: local
   paths:

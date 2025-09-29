@@ -51,13 +51,13 @@ type Listing @key(fields: "id") {
   "The number of beds available"
   numOfBeds: Int
   "The cost per night"
-  costPerNight: Float
+  costPerNight: Float @requiresScopes(scopes: [["cost:view"]])
   "The location type of the listing"
   locationType: LocationType!
   "Owner of the listing"
   host: Host!
   "The amenities available for this listing"
-  amenities: [Amenity]!
+  amenities: [Amenity]! @authenticated
   "Where this listing is located in the galaxy"
   coordinates: GalacticCoordinates
 }

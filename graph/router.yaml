@@ -15,7 +15,7 @@ authentication:
       jwks:
         - url: https://dev-4gnj48muikmjespc.us.auth0.com/.well-known/jwks.json
 authorization:
-  require_authentication: true
+  require_authentication: false
   directives:
     enabled: true
     reject_unauthorized: false
