@@ -1,3 +1,5 @@
+# Retrieve the details of a specific listing
+# The listingId argument usually starts with `listing-`
 query GetListingDetails($listingId: ID!) {
   listing(id: $listingId) {
     id
@@ -6,10 +8,10 @@ query GetListingDetails($listingId: ID!) {
     numOfBeds
     costPerNight
     locationType
+    photoThumbnail
     amenities {
       name
       category
     }
-    photoThumbnail
   }
 }
