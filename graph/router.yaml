@@ -1,6 +1,6 @@
 supergraph:
   listen: "127.0.0.1:4000"
-# This headers config below is for workshop development purposes only, use "Authorization: Bearer user-1" when testing the router in isolation locally. User id and role are hardcoded for the sake of the workshop.
+# This headers config below is for workshop development purposes only.
 # In this workshop, we will use a co-processor and JWT token to authenticate the user properly and properly configure the MCP server to use OAuth.
 headers:
   all:
