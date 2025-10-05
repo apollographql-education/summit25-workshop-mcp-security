@@ -1,16 +1,25 @@
 transport:
   type: streamable_http
+  auth:
+    servers:
+      - https://dev-4gnj48muikmjespc.us.auth0.com
+    audiences:
+      - https://airlock-api.demo
+    resource: http://127.0.0.1:5000/mcp
+    scopes:
+      - host:view
+      - guest:booking
+      - cost:view
 operations:
-  source: local
-  paths:
-    - ./mcp/operations/GetListingDetails.graphql
-    - ./mcp/operations/GetUser.graphql
+  source: uplink
 introspection:
   execute:
-    enabled: true
+    enabled: false
   introspect:
     enabled: true
   search:
     enabled: true
   validate:
     enabled: true
+overrides:
+  mutation_mode: explicit

@@ -9,3 +9,32 @@ headers:
           named: "Authorization"
 include_subgraph_errors:
   all: true
+authentication:
+  router:
+    jwt:
+      jwks:
+        - url: https://dev-4gnj48muikmjespc.us.auth0.com/.well-known/jwks.json
+authorization:
+  require_authentication: false
+  directives:
+    enabled: true
+    reject_unauthorized: false
+coprocessor:
+  url: https://airlock-auth-coprocessor-ed3c378ab968.herokuapp.com/
+  router:
+    request:
+      headers: true
+      context: all
+  subgraph:
+    all: 
+      request:
+        headers: true
+        body: true
+        context: all
+persisted_queries:
+  enabled: true
+  safelist:
+    enabled: true
+  log_unknown: true
+apq:
+  enabled: false
