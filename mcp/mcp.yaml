@@ -14,10 +14,12 @@ operations:
   source: uplink
 introspection:
   execute:
-    enabled: true
+    enabled: false
   introspect:
     enabled: true
   search:
     enabled: true
   validate:
     enabled: true
+overrides:
+  mutation_mode: explicit
