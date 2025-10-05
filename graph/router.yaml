@@ -31,3 +31,10 @@ coprocessor:
         headers: true
         body: true
         context: all
+persisted_queries:
+  enabled: true
+  safelist:
+    enabled: true
+  log_unknown: true
+apq:
+  enabled: false

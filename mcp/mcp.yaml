@@ -11,10 +11,7 @@ transport:
       - guest:booking
       - cost:view
 operations:
-  source: local
-  paths:
-    - ./mcp/operations/GetListingDetails.graphql
-    - ./mcp/operations/GetUser.graphql
+  source: uplink
 introspection:
   execute:
     enabled: true
